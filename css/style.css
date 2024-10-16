@@ -14,38 +14,62 @@ body {
     background-position: center;
 }
 
-.top-border {
-    border-bottom: 2px solid rgb(207, 207, 207); 
-    padding-bottom: 79px; 
-    margin-bottom: 20px; 
+
+.top-box {
+   
+    top: 0; /* Align with the top */
+    left: 0; /* Align with the left */
+    width: 100%; /* Full width */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    background-color: #fff; /* White background */
+    padding: 20px; /* Padding for the box */
+    z-index: 1000; /* Ensure it is above other content */
 }
 
+/* Style for vinyl-varme-text */
 .vinyl-varme-text {
     display: flex;
-    justify-content: center; /* Centrerer horisontalt */
-    align-items: center; /* Centrerer vertikalt */
-    margin-top: -75px; /* Move the image up by 20px */
-}
-.vinyl-varme-text img {
-    width: 40%;             
-    max-width: 200px;      
-    height: auto; 
-    margin-top: -5px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 0; /* Reset margin */
+    position: relative; /* Allow positioning relative to parent */
 }
 
+.vinyl-varme-text img {
+    width: 40%; /* Adjust size */
+    max-width: 500px; /* Limit max size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for vinyl-varme-logo */
 .vinyl-varme-logo {
-    display: flex;
-    justify-content: left; /* Centrerer horisontalt */
-    align-items: left; /* Centrerer vertikalt */
-    margin-top: -75px; /* Move the image up by 20px */
+    position: fixed;          /* Fix it relative to the viewport */
+    top: 17px;                /* Position it near the top */
+    left: 10px;              /* Position it near the right */
+    width: 50px;              /* Initial width of the form */
+    height: 50px;             /* Initial height of the form */
+  
+
+    
+    padding: 2px;             /* Padding inside the form */
+    margin-bottom: 10px;
+    
 }
+
 .vinyl-varme-logo img {
-    width: 40%;             
-    max-width: 35px;      
-    height: auto; 
-    margin-top: 19px;
-    margin-left: 25px;
+    position: fixed;
+    width: 40%; /* Adjust size */
+    max-width: 40px; /* Limit max size */
+    height: auto; /* Maintain aspect ratio */
+    background: white;        /* Background color */
+    border-radius: 25px;      /* Rounded corners */
+    border: 4px solid white;  /* Border around the form */
+    padding: -50px; 
+    margin-left: -7;
 }
+
 
 
 form {
@@ -132,13 +156,18 @@ input {
 }
 
 header   {
-    margin-top: 12px; 
-   position: sticky;
+    margin-top: 0px; 
+    border-top: #333;
+    border-width: 1px;
+    border-style: solid;
+    border-bottom: hidden;
+    border-left: hidden;
+    border-right: hidden;
     top: 0;
     left: 0;
     right: 0;
     background: #fff;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow:  5px 10px rgba(94, 94, 94, 0.1);
     padding: 10px 7%;
     display: flex;
     align-items: center;
@@ -260,3 +289,146 @@ header label {
 
 }
 
+.back-video {
+    margin-top: 5rem;
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    object-fit: cover; /* Cover the entire viewport while maintaining aspect ratio */
+    z-index: -1; /* Send video behind content */
+}
+
+.white-box {
+    display: flex;
+    background-color: #ffffff; /* White background for the box */
+    padding: 50px; /* Padding inside the box */
+    max-width: 500px; /* Max width of the box */
+    width: 90%; /* Responsive width */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text inside the box */
+    position: absolute; /* Use absolute positioning */
+    left: 50%; /* Center the box horizontally */
+    top: 110%; /* Center the box vertically */
+    transform: translate(-50%, -50%); /* Offset by half its width/height to truly center it */
+    z-index: 10; /* Bring it above other elements if necessary */
+    background-attachment: fixed; /* Background attachment (though might not affect box) */
+}
+
+/* Optional media query for smaller screens */
+@media (max-width: 600px) {
+    .white-box {
+        padding: 20px; /* Less padding on smaller screens */
+        width: 95%; /* Wider box on smaller screens */
+    }
+}
+
+
+label[for="menu-bar"] img {
+    width: 50px;
+    height: auto;
+    margin-left: 31rem;
+}
+
+.box-1 {
+    width: 520px; /* Set the width of the box */
+    height: 520px; /* Set the height of the box */
+    overflow: hidden; /* Ensures that the image doesn't overflow the box */
+    display: flex; /* Centers the image */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    margin-top: 63rem;
+    margin-left: 10rem;
+}
+
+.box-1 img {
+    max-width: 100%; /* Ensure the image is responsive and fits within the box */
+    max-height: 100%; /* Ensures the image doesn't exceed the box height */
+}
+
+.p-1{
+    z-index: 1;
+    margin-top: 1rem
+}
+
+.box-2 {
+    width: 492px; /* Set the width of the box */
+    height: 491px; /* Set the height of the box */
+    overflow: hidden; /* Ensures that the image doesn't overflow the box */
+    display: flex; /* Centers the image */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    margin-top: -31.6rem;
+    margin-left: 45rem;
+}
+
+.box-2 img {
+    max-width: 100%; /* Ensure the image is responsive and fits within the box */
+    max-height: 100%; /* Ensures the image doesn't exceed the box height */
+}
+
+.box-3 {
+    width: 478px; /* Set the width of the box */
+    height: 478px; /* Set the height of the box */
+    overflow: hidden; /* Ensures that the image doesn't overflow the box */
+    display: flex; /* Centers the image */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    margin-top: -30.3rem;
+    margin-left: 79.5rem;
+}
+
+.box-3 img {
+    max-width: 100%; /* Ensure the image is responsive and fits within the box */
+    max-height: 100%; /* Ensures the image doesn't exceed the box height */
+}
+
+.box-4 {
+    width: 478px; /* Set the width of the box */
+    height: 478px; /* Set the height of the box */
+    overflow: hidden; /* Ensures that the image doesn't overflow the box */
+    display: flex; /* Centers the image */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    margin-top: 11rem;
+    margin-left: 11.3rem;
+}
+
+.box-4 img {
+    max-width: 100%; /* Ensure the image is responsive and fits within the box */
+    max-height: 100%; /* Ensures the image doesn't exceed the box height */
+}
+
+.box-5 {
+    width: 496px; /* Set the width of the box */
+    height: 496px; /* Set the height of the box */
+    overflow: hidden; /* Ensures that the image doesn't overflow the box */
+    display: flex; /* Centers the image */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    margin-top: -30.5rem;
+    margin-left: 45rem;
+}
+
+.box-5 img {
+    max-width: 100%; /* Ensure the image is responsive and fits within the box */
+    max-height: 100%; /* Ensures the image doesn't exceed the box height */
+}
+
+.box-6 {
+    width: 480px; /* Set the width of the box */
+    height: 480px; /* Set the height of the box */
+    overflow: hidden; /* Ensures that the image doesn't overflow the box */
+    display: flex; /* Centers the image */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    margin-top: -30.5rem;
+    margin-left: 79.7rem;
+}
+
+.box-6 img {
+    max-width: 100%; /* Ensure the image is responsive and fits within the box */
+    max-height: 100%; /* Ensures the image doesn't exceed the box height */
+}
