@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', Arial;
+    text-decoration: none;
+    min-height: 100vh;
+    background: url;
+    background-size: cover;
+    background-position: center;
+}
+
+.top-border {
+    border-bottom: 2px solid rgb(207, 207, 207); 
+    padding-bottom: 79px; 
+    margin-bottom: 20px; 
+}
+
+.vinyl-varme-text {
+    display: flex;
+    justify-content: center; /* Centrerer horisontalt */
+    align-items: center; /* Centrerer vertikalt */
+    margin-top: -75px; /* Move the image up by 20px */
+}
+.vinyl-varme-text img {
+    width: 40%;             
+    max-width: 200px;      
+    height: auto; 
+    margin-top: -5px;
+}
+
+.vinyl-varme-logo {
+    display: flex;
+    justify-content: left; /* Centrerer horisontalt */
+    align-items: left; /* Centrerer vertikalt */
+    margin-top: -75px; /* Move the image up by 20px */
+}
+.vinyl-varme-logo img {
+    width: 40%;             
+    max-width: 35px;      
+    height: auto; 
+    margin-top: 19px;
+    margin-left: 25px;
+}
+
+
+form {
+    position: fixed;          /* Fix it relative to the viewport */
+    top: 10px;                /* Position it near the top */
+    right: 10px;              /* Position it near the right */
+    width: 50px;              /* Initial width of the form */
+    height: 50px;             /* Initial height of the form */
+    background: white;        /* Background color */
+    border-radius: 25px;      /* Rounded corners */
+    border: 4px solid white;  /* Border around the form */
+    padding: 5px;             /* Padding inside the form */
+    transition: all 1s;       /* Smooth transition on hover */
+    margin-top: 7px;
+}
+
+.fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: rgb(0, 0, 0);              /* Text color */
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;       /* Smooth transition for color/background changes */
+}
+
+form:hover {
+    width: 300px;             /* Expand the form width on hover */
+    cursor: pointer;
+}
+
+form:hover input {
+    display: block;           /* Show the input field on hover */
+}
+
+form:hover .fa {
+    background: rgb(255, 179, 79);         /* Change the icon background on hover */
+    color: white;             /* Change the icon color on hover */
+}
+
+/* Optional: Style the input field */
+form input {
+    display: none;            /* Initially hidden */
+    width: 100%;              /* Full width inside the form when shown */
+    border: 1px solid rgb(255, 179, 79);   /* Add a 2px solid border with a gray color */
+    padding: 20px;            /* Padding inside the input field */
+    outline: none;            /* Remove default browser outline */
+    border-radius: 25px;       /* Optional: Add rounded corners */
+}
+
+input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+
+@media (min-aspect-ratio: 16/9){
+    .back-video {
+           width:100%;
+    height: 100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+header   {
+    margin-top: 12px; 
+   position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 10px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+
+
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+}
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+
+header .navbar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 18px;
+    color: #333;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(126, 126, 126);
+
+    border-radius: 60px;
+    
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+header .navbar ul li ul li ul {
+    left: 200px;
+    top:0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: block;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:991px){
+
+
+    header {
+        padding: 20px;
+    }
+    
+    header label {
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left:0;
+        right:0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul {
+        width: 100%;
+        left:0;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: block;
+    }
+
+}
+
