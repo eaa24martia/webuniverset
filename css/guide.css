@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', Arial;
+    text-decoration: none;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+
+.top-box {
+   
+    top: 0; /* Align with the top */
+    left: 0; /* Align with the left */
+    width: 100%; /* Full width */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    background-color: #fff; /* White background */
+    padding: 20px; /* Padding for the box */
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+/* Style for vinyl-varme-text */
+.vinyl-varme-text {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 0; /* Reset margin */
+    position: relative; /* Allow positioning relative to parent */
+}
+
+.vinyl-varme-text img {
+    width: 40%; /* Adjust size */
+    max-width: 500px; /* Limit max size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for vinyl-varme-logo */
+.vinyl-varme-logo {
+    position: fixed;          /* Fix it relative to the viewport */
+    top: 17px;                /* Position it near the top */
+    left: 10px;              /* Position it near the right */
+    width: 50px;              /* Initial width of the form */
+    height: 50px;             /* Initial height of the form */
+  
+
+    
+    padding: 2px;             /* Padding inside the form */
+    margin-bottom: 10px;
+    z-index: 1000;
+    
+}
+
+.vinyl-varme-logo img {
+    position: fixed;
+    width: 40%; /* Adjust size */
+    max-width: 40px; /* Limit max size */
+    height: auto; /* Maintain aspect ratio */
+    background: white;        /* Background color */
+    border-radius: 25px;      /* Rounded corners */
+    border: 4px solid white;  /* Border around the form */
+    padding: -50px; 
+    margin-left: -7;
+}
+
+
+
+form {
+    position: fixed;          /* Fix it relative to the viewport */
+    top: 10px;                /* Position it near the top */
+    right: 10px;              /* Position it near the right */
+    width: 50px;              /* Initial width of the form */
+    height: 50px;             /* Initial height of the form */
+    background: white;        /* Background color */
+    border-radius: 25px;      /* Rounded corners */
+    border: 4px solid white;  /* Border around the form */
+    padding: 5px;             /* Padding inside the form */
+    transition: all 1s;       /* Smooth transition on hover */
+    margin-top: 7px;
+    z-index: 1000;
+}
+
+.fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: rgb(0, 0, 0);              /* Text color */
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;       /* Smooth transition for color/background changes */
+}
+
+form:hover {
+    width: 300px;             /* Expand the form width on hover */
+    cursor: pointer;
+}
+
+form:hover input {
+    display: block;           /* Show the input field on hover */
+}
+
+form:hover .fa {
+    background: rgb(255, 179, 79);         /* Change the icon background on hover */
+    color: white;             /* Change the icon color on hover */
+}
+
+/* Optional: Style the input field */
+form input {
+    display: none;            /* Initially hidden */
+    width: 100%;              /* Full width inside the form when shown */
+    border: 1px solid rgb(255, 179, 79);   /* Add a 2px solid border with a gray color */
+    padding: 20px;            /* Padding inside the input field */
+    outline: none;            /* Remove default browser outline */
+    border-radius: 25px;       /* Optional: Add rounded corners */
+}
+
+input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+
+@media (min-aspect-ratio: 16/9){
+    .back-video {
+           width:100%;
+    height: 100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+header   {
+    margin-top: 0px; 
+    border-top: #333;
+    border-width: 1px;
+    border-style: solid;
+    border-bottom: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow:  2px 6px rgba(189, 189, 189, 0.1);
+    padding: 10px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+}
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+
+header .navbar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 18px;
+    color: #333;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(126, 126, 126);
+
+    border-radius: 60px;
+    
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+header .navbar ul li ul li ul {
+    left: 200px;
+    top:0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: block;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:991px){
+
+
+    header {
+        padding: 20px;
+    }
+    
+    header label {
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left:0;
+        right:0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul {
+        width: 100%;
+        left:0;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: block;
+    }
+
+}
+
+.looking { 
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto; 
+    height: auto; 
+    z-index: -1; 
+    justify-content: center; 
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.nyeste-nye {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 57rem;
+    position: relative;
+    z-index: 2;
+}
+
+.h1-class {
+    justify-content: center; 
+    text-align: center;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.af {
+    justify-content: center; 
+    text-align: center;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 2rem;
+}
+
+.bold {
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.pladespilleren {
+    position: absolute;
+    top: 50%; /* Keep vertical centering */
+    right: 0; /* Align to the right */
+    transform: translateY(-50%); /* Adjust vertical centering */
+    width: auto; 
+    height: 620px; 
+    z-index: -1; 
+    justify-content: center; 
+    text-align: center;
+   margin-top:70rem;
+   margin-right: 5rem;
+   padding-bottom: 5rem;
+}
+
+.side {
+    justify-content: center; 
+    text-align:justify;
+    position: relative;
+    padding-left: 5%;
+    padding-right: 53%;
+    margin-top: 3rem;
+    }
+    
+    .elsker {
+    margin-bottom: 1rem;
+    }
+
+    .guides {
+        position: relative; 
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        margin-top: 140px;
+        z-index: 0;
+        margin-left: 55rem;
+    }
+    
+    .first-hr {
+        border: none;                  
+        height: 1px;                 
+        background-color: #747070;       
+        width: 800px;                 
+        margin-top: -0.8rem;
+        margin-left: -4rem;
+    }
+    
+    .second-hr {
+        border: none;                 
+        height: 1px;                  
+        background-color: #747070;       
+        width: 700px;                 
+        margin-top: -0.1rem;
+        margin-left: 64rem;
+       
+    }
+
+    .video-container {
+        display: flex;
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 800px; /* Optional: max width for larger screens */
+        margin: 20px auto; /* Center the container */
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        margin-left: 30rem;
+        margin-right: -30rem;
+        margin-top: 5rem;
+
+    }
+
+    #alt{
+        justify-content: center; 
+        text-align:justify;
+        position: relative;
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-top: 5rem;
+        margin-left: 10rem;
+        margin-right: -50rem;
+        }
+
+    .elsker {
+     margin-bottom: 1rem;
+    }
+
+    .dobbelt {
+        margin-bottom: 4rem;
+        }
+
+.eget-mærke {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    width: auto;
+    height: 600px;
+    margin-top: 5rem;
+    margin-right: -20rem;
+}
+
+.grine {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    width: auto;
+    height: 600px;
+    margin-top: 5rem;
+    margin-left: 50%;
+    margin-right: 10%;
+    margin-bottom: 5rem;
+}
+
+.footer {
+    background-color: #f0a561; /* Use the same background color as in the image */
+    padding-top: 3rem;
+    text-align: center;
+    color: #000;
+    margin-top: 10rem;
+    padding-bottom: 1.3rem;
+}
+
+
+.logo-teksten {
+    margin-left: -80rem;
+    text-align: left; /* Aligns text to the left */
+}
+
+.logo-teksten {
+    max-height: 80px; /* Adjust height as needed */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.footer-billede {
+    position: absolute; /* Centers it independently */
+    left: 50%; /* Moves it to the horizontal center */
+    transform: translateX(-50%); /* Centers it exactly */
+    text-align: center;
+}
+
+.footer-billede {
+    max-height: 80px; /* Adjust height as needed */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the left */
+    margin-top: 30px; /* Adjust spacing above as needed */
+    margin-left: 7rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(0); /* Adjust based on icon color */
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -4.5rem;
+    margin-right: 8rem;
+    padding-bottom: 5rem;
+}
+
+.footer-links h3 {
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -13rem;
+    margin-right: -11.5rem
+
+   
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin-right: 5rem;
+    text-align: left;
+
+}
+
+.footer-links li {
+    margin: 20px 0;
+    
+}
+
+.footer-links a {
+    color: #000;
+    text-decoration: none;
+    
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer hr {
+    margin: 20px auto;
+    border: 0;
+    border-top: 1px solid #000;
+    width: 90%;
+
+}
+
+.footer-copyright {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #000;
+}
+
+.tekst-footeren {
+    text-align: left;
+    margin-left: 7rem;
+}
+
+
+    
+    
+  
+
+
+
