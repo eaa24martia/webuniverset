@@ -177,7 +177,6 @@ header   {
 
 
 
-
 header .logo {
     font-weight: bolder;
     font-size: 25px;
@@ -289,42 +288,38 @@ header label {
 
 }
 
-.blå-pink { 
-        margin-top: 5rem;
-        position: absolute;
-        display: flex;
-        top: 0;
-        left: 0;
-        width: 100vw; 
-        height: 100vh; 
-        object-fit: cover; 
-        z-index: -1; 
-
+.orange-vinyl { 
+    position: absolute;
+    display: flex;
+    max-height: 1000px;
+    max-width: 1000px;
+    top: 50%;
+    left: 82%;
+    transform: translate(-50%, -50%);
+    width: auto; 
+    height: auto; 
+    z-index: -1; 
+    justify-content: center; 
+    text-align: center;
+    margin-top: 5rem;
 }
 
-
-.blue-box {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    margin-top: 64rem;
-    width: 200rem; 
-    height: 15rem; 
-    background-color:#9BDDFF;
-
+.headeren {
+margin-top: -30rem;
+margin-left: -50rem;
 }
 
 .nyeste-nye {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    margin-top: 56rem;
+    margin-top: 57rem;
     position: relative;
     z-index: 2;
 }
 
 .h1-class {
-    justify-content: center; 
+    justify-content: left; 
     text-align: center;
     margin-top: 0.5rem;
     position: relative;
@@ -337,6 +332,7 @@ header label {
     margin-top: 1rem;
     position: relative;
     z-index: 2;
+    padding-bottom: 2rem;
 }
 
 .bold {
@@ -344,99 +340,75 @@ header label {
     color: #2e2e2e;
 }
 
-#alt{
-justify-content: center; 
-text-align:justify;
-position: relative;
-padding-left: 20%;
-padding-right: 20%;
-margin-top: 10rem;
+.linjen {
+margin-top: 18.2rem;
+z-index: -1;
 }
 
-.altclass {
+#alt{
     justify-content: center; 
     text-align:justify;
     position: relative;
-    padding-left: 10%;
-    padding-right: 60%;
+    padding-left: 15%;
+    padding-right: 65%;
     margin-top: 5rem;
     margin-left: 10rem;
     margin-right: -50rem;
     }
 
+.altclass{
+        justify-content: center; 
+        text-align:justify;
+        position: relative;
+        padding-left: 15%;
+        padding-right: 65%;
+        margin-top: 5rem;
+        margin-left: 10rem;
+        margin-right: -50rem;
+        }
+
 .elsker {
-margin-bottom: 1rem;
+ margin-bottom: 1rem;
 }
 
 .dobbelt {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     }
 
-.target {
-    display: flex;
-    justify-content: center; 
-    position: relative;
-    height: 50px;
-    width: auto;
-    margin-top: 7rem;
-
-}
-
-.target-text {
-    display: flex;
-    justify-content: center; 
-    position: relative;
-    height: 50px;
-    width: auto;
-    margin-top: 0.5rem;
-}
-
-.chapell {
-    display: flex;
-    justify-content: left;
-    position: relative;
-    width: auto;
-    margin-top: 2rem;
-    margin-left: 10rem;
-}
-
-.weeknd {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: auto;
-    height: 310px;
-    margin-top: -20rem;
-}
-
-.sabrina {
+.fællesskab {
     display: flex;
     justify-content: right;
     position: relative;
     width: auto;
-    height: 310px;
-    margin-top: -19.5rem;
-    margin-right: 10rem;
-}
-
-.alle-tre {
-    display: flex;
-    justify-content: right;
-    position: relative;
-    width: auto;
-    height: 450px;
-    margin-top: 10rem;
-    margin-right: 15rem;
-}
-
-.graf {
-    display: flex;
-    justify-content: right;
-    position: relative;
-    width: auto;
-    height: 450px;
+    height: 600px;
     margin-top: 5rem;
-    margin-right: 30rem;
+    margin-left: 40%;
+    margin-right: 33%;
+    margin-bottom: 5rem;
+}
+
+.info {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    width: auto;
+    height: 600px;
+    margin-top: 5rem;
+    margin-left: 40%;
+    margin-right: 35%;
+    margin-bottom: 5rem;
+}
+
+.rens {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    width: auto;
+    height: 600px;
+    margin-top: 5rem;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 5rem;
 }
 
 .footer {
@@ -551,4 +523,6 @@ margin-bottom: 1rem;
     text-align: left;
     margin-left: 7rem;
 }
+
+
 

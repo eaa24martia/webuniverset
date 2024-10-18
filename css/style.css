@@ -35,6 +35,7 @@ body {
     align-items: center; /* Center vertically */
     margin-top: 0; /* Reset margin */
     position: relative; /* Allow positioning relative to parent */
+    margin-left: 20rem;
 }
 
 .vinyl-varme-text img {
@@ -66,8 +67,6 @@ body {
     background: white;        /* Background color */
     border-radius: 25px;      /* Rounded corners */
     border: 4px solid white;  /* Border around the form */
-    padding: -50px; 
-    margin-left: -7;
 }
 
 
